@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>杨喆 | 个人主页</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 背景粒子画布 -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- 导航栏 -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>YZ<span class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link active">首页</a></li>
+                <li><a href="#about" class="nav-link">关于我</a></li>
+                <li><a href="#resume" class="nav-link">简历</a></li>
+                <li><a href="#skills" class="nav-link">技能</a></li>
+                <li><a href="#projects" class="nav-link">项目</a></li>
+                <li><a href="#research" class="nav-link">科研</a></li>
+                <li><a href="#awards" class="nav-link">获奖</a></li>
+                <li><a href="#contact" class="nav-link">联系</a></li>
+            </ul>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 首页 Hero -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-greeting">你好，我是</div>
+            <h1 class="hero-name">
+                <span class="typing-text" data-text="杨喆"></span>
+                <span class="cursor">|</span>
+            </h1>
+            <div class="hero-title">
+                <span class="title-prefix">&gt; </span>
+                <span class="title-text">嵌入式软件工程师 / Qt 开发工程师</span>
+            </div>
+            <div class="hero-desc">
+                厦门大学 2027 届硕士 · LC Group · 液晶光取向与运动控制
+            </div>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">查看项目</a>
+                <a href="#contact" class="btn btn-outline">联系我</a>
+            </div>
+            <div class="hero-scroll">
+                <span class="scroll-text">向下滚动</span>
+                <div class="scroll-line"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我 -->
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">01. 关于我</span>
+                <h2 class="section-title">About Me</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-frame">
+                        <div class="image-placeholder">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                            <span>你的照片</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <p>
+                        我是<strong>杨喆</strong>，厦门大学 2027 届硕士研究生，就读于 LC Group，师从陈鹭剑教授。
+                        本科毕业于中南大学，目前专注于嵌入式软件开发与运动控制系统的研究。
+                    </p>
+                    <p>
+                        我的技术栈覆盖 <span class="highlight">C++ / Qt</span> 桌面应用开发、<span class="highlight">STM32 / Keil</span> 嵌入式开发、
+                        以及 <span class="highlight">运动控制</span> 与 <span class="highlight">AI 应用</span>。曾获得声流控国二奖项，
+                        在科研与工程实践中积累了丰富的经验。
+                    </p>
+                    <p>
+                        目前我正在准备华为嵌入式软件岗位的校招/实习，同时推进液晶光取向、激光控制系统等多个项目。
+                        热爱技术，追求代码之美，期待在嵌入式与运动控制领域做出更多贡献。
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">3+</span>
+                            <span class="stat-label">年编程经验</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">个项目</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">1</span>
+                            <span class="stat-label">篇论文</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 简历时间线 -->
+    <section id="resume" class="resume section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">02. 简历</span>
+                <h2 class="section-title">Resume</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2024 - 2027</span>
+                        <h3>硕士研究生</h3>
+                        <p class="timeline-place">厦门大学 · LC Group</p>
+                        <p class="timeline-desc">师从陈鹭剑教授，研究方向为液晶光取向与振镜扫描。涉及光栅、PB光栅、涡旋、透镜、全息、阵列等实验类型。</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2020 - 2024</span>
+                        <h3>本科</h3>
+                        <p class="timeline-place">中南大学</p>
+                        <p class="timeline-desc">获得声流控国二奖项，奠定了扎实的编程与硬件基础。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技能 -->
+    <section id="skills" class="skills section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">03. 技能</span>
+                <h2 class="section-title">Skills</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><span class="category-icon">💻</span> 编程语言</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span class="skill-name">C++</span>
+                            <div class="skill-bar"><div class="skill-progress" data-width="90"></div></div>
+                            <span class="skill-level">90%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">C</span>
+                            <div class="skill-bar"><div class="skill-progress" data-width="85"></div></div>
+                            <span class="skill-level">85%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar"><div class="skill-progress" data-width="75"></div></div>
+                            <span class="skill-level">75%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-bar"><div class="skill-progress" data-width="70"></div></div>
+                            <span class="skill-level">70%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><span class="category-icon">🛠</span> 框架与工具</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span class="skill-name">Qt5 / Qt6</span>
+                            <div class="skill-bar"><div class="skill-progress" data-width="88"></div></div>
+                            <span class="skill-level">88%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">STM32 / Keil</span>
+                            <div class="skill-bar"><div class="skill-progress" data-width="82"></div></div>
+                            <span class="skill-level">82%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Git</span>
+                            <div class="skill-bar"><div class="skill-progress" data-width="80"></div></div>
+                            <span class="skill-level">80%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Zmotion 运动控制</span>
+                            <div class="skill-bar"><div class="skill-progress" data-width="78"></div></div>
+                            <span class="skill-level">78%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><span class="category-icon">🔬</span> 专业领域</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">嵌入式开发</span>
+                        <span class="skill-tag">运动控制</span>
+                        <span class="skill-tag">激光控制</span>
+                        <span class="skill-tag">振镜扫描</span>
+                        <span class="skill-tag">液晶光取向</span>
+                        <span class="skill-tag">全息光学</span>
+                        <span class="skill-tag">串口通信</span>
+                        <span class="skill-tag">多线程编程</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><span class="category-icon">🌐</span> 其他技术</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">微信小程序</span>
+                        <span class="skill-tag">微信云开发</span>
+                        <span class="skill-tag">微信支付</span>
+                        <span class="skill-tag">Excel 数据处理</span>
+                        <span class="skill-tag">LeetCode 算法</span>
+                        <span class="skill-tag">AI 应用</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 项目 -->
+    <section id="projects" class="projects section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">04. 项目</span>
+                <h2 class="section-title">Projects</h2>
+            </div>
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">全部</button>
+                <button class="filter-btn" data-filter="embedded">嵌入式</button>
+                <button class="filter-btn" data-filter="qt">Qt 桌面</button>
+                <button class="filter-btn" data-filter="web">Web/小程序</button>
+                <button class="filter-btn" data-filter="research">科研</button>
+            </div>
+            <div class="projects-grid">
+                <!-- 项目1：激光控制系统 -->
+                <div class="project-card" data-category="qt">
+                    <div class="project-header">
+                        <div class="project-icon">🔦</div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" title="GitHub"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">激光控制系统</h3>
+                    <p class="project-desc">基于 Qt5/C++17 的激光控制平台，集成 Zmotion 运动库，实现振镜、旋转台、XY 平台的多轴联动控制，支持位图导入、拼接曝光、轨迹规划等功能。</p>
+                    <div class="project-tech">
+                        <span>Qt5</span><span>C++17</span><span>Zmotion</span><span>多线程</span>
+                    </div>
+                </div>
+
+                <!-- 项目2：液晶光取向实验平台 -->
+                <div class="project-card" data-category="research">
+                    <div class="project-header">
+                        <div class="project-icon">🔬</div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" title="GitHub"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">液晶光取向实验平台</h3>
+                    <p class="project-desc">厦门大学 LC Group 科研项目，研究液晶光取向技术，涉及光栅、PB 光栅、涡旋光、透镜、全息图、阵列等多种光学结构的实验制备与表征。</p>
+                    <div class="project-tech">
+                        <span>光学</span><span>液晶</span><span>MATLAB</span><span>实验设计</span>
+                    </div>
+                </div>
+
+                <!-- 项目3：台球厅小程序 -->
+                <div class="project-card" data-category="web">
+                    <div class="project-header">
+                        <div class="project-icon">🎱</div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" title="GitHub"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">台球厅微信小程序</h3>
+                    <p class="project-desc">台球厅 Mall 小程序后端开发，采用微信云开发技术栈，集成微信支付、云数据库、订单管理、会员系统等功能。</p>
+                    <div class="project-tech">
+                        <span>微信小程序</span><span>云开发</span><span>微信支付</span><span>Node.js</span>
+                    </div>
+                </div>
+
+                <!-- 项目4：STM32 嵌入式项目 -->
+                <div class="project-card" data-category="embedded">
+                    <div class="project-header">
+                        <div class="project-icon">⚡</div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" title="GitHub"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">STM32 嵌入式控制系统</h3>
+                    <p class="project-desc">基于 STM32 的嵌入式控制系统开发，使用 Keil 开发环境，涉及 GPIO、定时器、ADC、串口通信、PWM 输出等外设驱动开发。</p>
+                    <div class="project-tech">
+                        <span>STM32</span><span>Keil</span><span>C</span><span>硬件驱动</span>
+                    </div>
+                </div>
+
+                <!-- 项目5：运动控制平台 -->
+                <div class="project-card" data-category="embedded">
+                    <div class="project-header">
+                        <div class="project-icon">🎯</div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" title="GitHub"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">CSG-602R 运动控制平台</h3>
+                    <p class="project-desc">基于 CSG-602R 运动平台控制器的控制系统，通过串口 COM12 通信，使用 Excel 管理轨迹数据，实现精密运动控制与轨迹规划。</p>
+                    <div class="project-tech">
+                        <span>运动控制</span><span>串口通信</span><span>Excel</span><span>C++</span>
+                    </div>
+                </div>
+
+                <!-- 项目6：声流控项目 -->
+                <div class="project-card" data-category="research">
+                    <div class="project-header">
+                        <div class="project-icon">🌊</div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" title="GitHub"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">声流控微流控芯片</h3>
+                    <p class="project-desc">本科期间参与的声流控项目，获得国家级二等奖。研究声波在微流控芯片中的操控技术，用于微粒分选与细胞操控。</p>
+                    <div class="project-tech">
+                        <span>声流控</span><span>微流控</span><span>实验设计</span><span>国赛二等奖</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 科研成果 -->
+    <section id="research" class="research section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">05. 科研</span>
+                <h2 class="section-title">Research</h2>
+            </div>
+            <div class="research-content">
+                <div class="research-card">
+                    <div class="research-icon">📐</div>
+                    <h3>液晶光取向技术</h3>
+                    <p>研究利用光控取向技术对液晶分子进行精确排列，实现各种光学功能结构的制备。涉及光栅、PB 光栅（Pancharatnam-Berry 光栅）、涡旋光、透镜、全息图、阵列等多种光学元件。</p>
+                </div>
+                <div class="research-card">
+                    <div class="research-icon">🔍</div>
+                    <h3>振镜扫描系统</h3>
+                    <p>开发基于振镜的激光扫描系统，实现高速、高精度的激光束偏转控制。结合运动控制平台，构建完整的激光加工与曝光系统。</p>
+                </div>
+                <div class="research-card">
+                    <div class="research-icon">📊</div>
+                    <h3>光学表征与分析</h3>
+                    <p>对制备的光学结构进行表征与分析，包括衍射效率测量、偏振态分析、相位分布测量等，验证理论设计与实验结果的一致性。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 获奖 -->
+    <section id="awards" class="awards section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">06. 获奖</span>
+                <h2 class="section-title">Awards</h2>
+            </div>
+            <div class="awards-list">
+                <div class="award-item" data-aos="fade-up">
+                    <div class="award-icon">🏆</div>
+                    <div class="award-content">
+                        <h3>声流控竞赛 国家级二等奖</h3>
+                        <p>全国大学生声流控创新设计竞赛</p>
+                        <span class="award-year">2023</span>
+                    </div>
+                </div>
+                <div class="award-item" data-aos="fade-up">
+                    <div class="award-icon">🥈</div>
+                    <div class="award-content">
+                        <h3>学业奖学金</h3>
+                        <p>厦门大学硕士研究生学业奖学金</p>
+                        <span class="award-year">2024 - 2027</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系方式 -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">07. 联系</span>
+                <h2 class="section-title">Contact</h2>
+            </div>
+            <div class="contact-content">
+                <p class="contact-desc">有合作意向或技术交流？欢迎通过以下方式联系我。</p>
+                <div class="contact-links">
+                    <a href="mailto:your-email@example.com" class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <span>Email</span>
+                    </a>
+                    <a href="#" class="contact-item">
+                        <div class="contact-icon">💻</div>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="#" class="contact-item">
+                        <div class="contact-icon">💼</div>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="#" class="contact-item">
+                        <div class="contact-icon">📝</div>
+                        <span>博客</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">
+                    <span class="footer-code">&lt;/&gt;</span> 
+                    用 ❤️ 和代码构建 · 杨喆 · 2025
+                </p>
+                <p class="footer-sub">Designed & Built by 天才小李 🎯</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
